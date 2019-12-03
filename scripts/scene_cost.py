@@ -64,8 +64,10 @@ class Obstacle:
     def print_data(self):
         rospy.loginfo("ID: %s" % self.id)
         rospy.loginfo("Dimensions: %s" % str(self.primitives[0]))
-        rospy.loginfo("Position: %s" % repr(self.primitive_poses[0]['position']))
-        rospy.loginfo("Orientation: %s" % repr(self.primitive_poses[0]['orientation']))
+        rospy.loginfo("Position: %s" % repr(
+            self.primitive_poses[0]['position']))
+        rospy.loginfo("Orientation: %s" % repr(
+            self.primitive_poses[0]['orientation']))
 
 
 if __name__ == "__main__":
