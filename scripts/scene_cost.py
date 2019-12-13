@@ -12,8 +12,10 @@ obstacles = []
 def handle_scene_based_cost(request):
     # TODO: Compute cost according to the scene that is read
     cost = 0.1
-    rospy.loginfo("Returning cost: %f" % cost)
-    return cost
+    srv = CustomCostResponse()
+    srv.cost = cost
+    srv.type = 0
+    return srv
 
 
 def handle_scene_callback(message):
